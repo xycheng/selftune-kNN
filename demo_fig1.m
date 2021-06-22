@@ -1,13 +1,13 @@
-% This file reproduces fig 1 in the paper
-% to compare knn hatrho and kde hatp
+% This file reproduces fig 1 in the paper, to compare knn hatrho and kde hatp
 
-tic
+% the code (including the for loops for all values of k) runs in about 90 secends.
+
+
 clear all; rng(2020);
 
 %% data and p
 
-%p = 1-(1-\delta)*sin(2pi*t)
-%delta_p = 1e-2;
+%p = 1-(1-\delta_p)*sin(2pi*t)
 
 delta_p = 0.05;
 
@@ -34,8 +34,7 @@ tgrid = (0: dtgrid : 1)';
 pgrid = p_func(tgrid);
 Fgrid = F_func(tgrid);
 
-% visualize density
-% sample by approx inverse
+% visualize density, sample by approx inverse
 n = 1e4;
 
 %tic,
@@ -244,4 +243,4 @@ set(gca,'FontSize',20);
 title('$|\hat{p}(x)-p(x)|/p(x)$', 'Interpreter', 'latex')
 drawnow();
 xlabel('$t_X$','Interpreter','latex')
-toc
+
