@@ -1,4 +1,4 @@
-# selftune-kNN
+# Graph Laplacian with kNN self-tuned kernels
 
 Matlab code to reproduce the numerical results in
 
